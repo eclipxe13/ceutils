@@ -13,12 +13,12 @@ use CfdiUtils\Validate\Status;
 use CfdiUtils\Validate\Traits\XmlStringPropertyTrait;
 use CfdiUtils\XmlResolver\XmlResolver;
 use CfdiUtils\XmlResolver\XmlResolverPropertyTrait;
+use Eclipxe\XmlResourceRetriever\XsdRetriever;
 use Eclipxe\XmlSchemaValidator\Exceptions\ValidationFailException;
 use Eclipxe\XmlSchemaValidator\Schema;
 use Eclipxe\XmlSchemaValidator\Schemas;
 use Eclipxe\XmlSchemaValidator\SchemaValidator;
 use PhpCfdi\CeUtils\Validate\ValidatorInterface;
-use XmlResourceRetriever\XsdRetriever;
 
 abstract class BaseDocumentFollowSchemas implements
     ValidatorInterface,
