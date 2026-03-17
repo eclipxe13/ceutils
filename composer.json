@@ -1,6 +1,7 @@
 {
     "name": "phpcfdi/ceutils",
     "description": "PHP library for Mexican SAT Electronic Accounting 1.3",
+    "license": "MIT",
     "keywords": [
         "mexico",
         "sat",
@@ -8,8 +9,6 @@
         "póliza",
         "balanza"
     ],
-    "homepage": "https://github.com/PhpCfdi/CeUtils",
-    "license": "MIT",
     "authors": [
         {
             "name": "Cesar Aguilera",
@@ -20,11 +19,12 @@
             "email": "eclipxe13@gmail.com"
         }
     ],
+    "homepage": "https://github.com/PhpCfdi/CeUtils",
     "require": {
         "php": ">=8.0",
         "ext-bcmath": "*",
-        "ext-openssl": "*",
         "ext-dom": "*",
+        "ext-openssl": "*",
         "eclipxe/cfdiutils": "^3.0.2",
         "eclipxe/xmlresourceretriever": "^2.0.3",
         "eclipxe/xmlschemavalidator": "^3.0.5",
