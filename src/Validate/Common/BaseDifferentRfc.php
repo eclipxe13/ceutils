@@ -47,7 +47,7 @@ abstract class BaseDifferentRfc implements ValidatorInterface
         NodeInterface $node,
         Asserts $asserts,
         string $location,
-        int $count
+        int $count,
     ): void {
         $rfc = $node['RFC'];
         $asserts->put(
