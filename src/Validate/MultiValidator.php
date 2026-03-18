@@ -14,16 +14,14 @@ abstract class MultiValidator
     /** @var array<class-string> */
     protected array $validatorClasses = [];
 
-    private Hydrater $hydrater;
+    private readonly Hydrater $hydrater;
 
     public function __construct()
     {
         $this->hydrater = new Hydrater();
     }
 
-    /**
-     * @return array<class-string>
-     */
+    /** @return array<class-string> */
     public function getValidatorClasses(): array
     {
         return $this->validatorClasses;
@@ -46,9 +44,7 @@ abstract class MultiValidator
         return $asserts;
     }
 
-    /**
-     * @return Generator<ValidatorInterface>
-     */
+    /** @return Generator<ValidatorInterface> */
     protected function createValidators(): Generator
     {
         foreach ($this->getValidatorClasses() as $validatorClass) {
@@ -57,10 +53,9 @@ abstract class MultiValidator
     }
 
     /**
-     * Creates an hydrated validator
+     * Creates a hydrated validator
      *
      * @param class-string $validatorClass
-     * @return ValidatorInterface
      */
     protected function createValidator(string $validatorClass): ValidatorInterface
     {

@@ -12,12 +12,10 @@ use PhpCfdi\CeUtils\Validate\MultiValidator;
 
 class AuxiliarFoliosCreator13 extends AbstractCreator
 {
-    private RepAuxFol $repAuxFol;
+    private readonly RepAuxFol $repAuxFol;
 
-    /**
-     * @param  array<string, string>  $attributes
-     */
-    public function __construct(array $attributes)
+    /** @param array<string, string> $attributes */
+    public function __construct(array $attributes = [])
     {
         parent::__construct();
         $this->repAuxFol = new RepAuxFol($attributes);

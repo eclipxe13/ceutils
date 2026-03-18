@@ -11,17 +11,11 @@ use PhpCfdi\CeUtils\Validate\ValidatorInterface;
 
 abstract class BaseDocumentDefinition implements ValidatorInterface
 {
-    private string $assertPrefix;
-
-    private string $rootElementName;
-
-    private string $namespace;
-
-    public function __construct(string $assertPrefix, string $rootElementName, string $namespace)
-    {
-        $this->assertPrefix = $assertPrefix;
-        $this->rootElementName = $rootElementName;
-        $this->namespace = $namespace;
+    public function __construct(
+        private readonly string $assertPrefix,
+        private readonly string $rootElementName,
+        private readonly string $namespace,
+    ) {
     }
 
     public function getAssertName(string $suffix): string

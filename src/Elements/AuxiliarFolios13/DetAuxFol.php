@@ -13,7 +13,10 @@ class DetAuxFol extends AbstractElement
         return 'RepAux:DetAuxFol';
     }
 
-    /** @return string[] */
+    /**
+     * @noinspection PhpMissingParentCallCommonInspection
+     * @return string[]
+     */
     public function getChildrenOrder(): array
     {
         return [

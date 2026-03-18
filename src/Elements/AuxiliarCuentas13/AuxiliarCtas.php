@@ -14,6 +14,7 @@ class AuxiliarCtas extends AbstractElement
         return AuxiliarCuentas13Definition::ELEMENT_NAME;
     }
 
+    /** @noinspection PhpMissingParentCallCommonInspection */
     public function getFixedAttributes(): array
     {
         return [

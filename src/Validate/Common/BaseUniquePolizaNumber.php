@@ -16,12 +16,11 @@ abstract class BaseUniquePolizaNumber implements ValidatorInterface
 {
     use AssertPrefixPropertyTrait;
 
-    private string $childName;
-
-    public function __construct(string $assertPrefix, string $childName)
-    {
+    public function __construct(
+        string $assertPrefix,
+        private readonly string $childName,
+    ) {
         $this->assertPrefix = $assertPrefix;
-        $this->childName = $childName;
     }
 
     public function getChildName(): string

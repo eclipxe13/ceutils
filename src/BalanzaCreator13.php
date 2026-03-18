@@ -12,12 +12,10 @@ use PhpCfdi\CeUtils\Validate\MultiValidator;
 
 class BalanzaCreator13 extends AbstractCreator
 {
-    private Balanza $balanza;
+    private readonly Balanza $balanza;
 
-    /**
-     * @param  array<string, string>  $attributes
-     */
-    public function __construct(array $attributes)
+    /** @param array<string, string> $attributes */
+    public function __construct(array $attributes = [])
     {
         parent::__construct();
         $this->balanza = new Balanza($attributes);

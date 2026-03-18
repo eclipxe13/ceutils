@@ -19,9 +19,6 @@ interface ValidatorInterface
 
     /**
      * Run validations populating the asserts collection
-     *
-     * @param NodeInterface $root
-     * @param Asserts $asserts
      */
     public function validate(NodeInterface $root, Asserts $asserts): void;
 }

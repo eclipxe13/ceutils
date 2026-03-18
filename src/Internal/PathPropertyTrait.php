@@ -6,10 +6,10 @@ namespace PhpCfdi\CeUtils\Internal;
 
 trait PathPropertyTrait
 {
-    /** @var string[] */
+    /** @var list<string> */
     private array $path;
 
-    /** @return string[] */
+    /** @return list<string> */
     public function getPath(): array
     {
         return $this->path;

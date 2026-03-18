@@ -14,6 +14,7 @@ class Polizas extends AbstractElement
         return Polizas13Definition::ELEMENT_NAME;
     }
 
+    /** @noinspection PhpMissingParentCallCommonInspection */
     public function getFixedAttributes(): array
     {
         return [

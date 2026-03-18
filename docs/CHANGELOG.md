@@ -22,6 +22,10 @@ Se elimina la compatibilidad con PHP 7.4 y PHP 8.0.
 
 Se actualizó el año de licencia.
 
+Se moderniza el código a PHP 8.1 con la ayuda de `rector/rector`.
+Este cambio genera múltiples cambios en la definición de propiedades
+y la definición de propiedades de tipo solo lectura.
+
 Cambios en el entorno de desarrollo:
 
 - Se migra de Scrutinizer-CI a SonarCloud.

@@ -63,7 +63,7 @@ final class CuentasSaldoFinal implements ValidatorInterface
                 $node['Debe'],
                 $node['Haber'],
                 $node['SaldoFin'],
-                (string) $equals,
+                $equals ? 'Verdadero' : 'Falso',
             ),
         );
         return $equals;
