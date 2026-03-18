@@ -13,13 +13,14 @@ use CfdiUtils\XmlResolver\XmlResolver;
 use CfdiUtils\XmlResolver\XmlResolverPropertyTrait;
 use PhpCfdi\CeUtils\Validate\MultiValidator;
 use PhpCfdi\Credentials\Credential;
+use RuntimeException;
 
 abstract class AbstractCreator
 {
     use XsltBuilderPropertyTrait;
     use XmlResolverPropertyTrait;
 
-    public function __construct(?XmlResolver $xmlResolver = null)
+    public function __construct(XmlResolver|null $xmlResolver = null)
     {
         $this->setXsltBuilder(new DOMBuilder());
         $this->setXmlResolver($xmlResolver ?? new XmlResolver());
@@ -60,7 +61,7 @@ abstract class AbstractCreator
         $location = $this->getXmlResolver()->resolve($this->getXsltLocation(), 'XSLT');
         $sourceString = $this->getXsltBuilder()->build($this->asXml(), $location);
         if ('' === trim($sourceString, '|')) {
-            throw new \RuntimeException('Unable to create the source string');
+            throw new RuntimeException('Unable to create the source string');
         }
         return $sourceString;
     }

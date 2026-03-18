@@ -13,12 +13,12 @@ use CfdiUtils\Validate\Status;
 use CfdiUtils\Validate\Traits\XmlStringPropertyTrait;
 use CfdiUtils\XmlResolver\XmlResolver;
 use CfdiUtils\XmlResolver\XmlResolverPropertyTrait;
+use Eclipxe\XmlResourceRetriever\XsdRetriever;
 use Eclipxe\XmlSchemaValidator\Exceptions\ValidationFailException;
 use Eclipxe\XmlSchemaValidator\Schema;
 use Eclipxe\XmlSchemaValidator\Schemas;
 use Eclipxe\XmlSchemaValidator\SchemaValidator;
 use PhpCfdi\CeUtils\Validate\ValidatorInterface;
-use XmlResourceRetriever\XsdRetriever;
 
 abstract class BaseDocumentFollowSchemas implements
     ValidatorInterface,
@@ -28,17 +28,11 @@ abstract class BaseDocumentFollowSchemas implements
     use XmlStringPropertyTrait;
     use XmlResolverPropertyTrait;
 
-    private string $assertPrefix;
-
-    private string $namespace;
-
-    private string $xsdLocation;
-
-    public function __construct(string $assertPrefix, string $namespace, string $xsdLocation)
-    {
-        $this->assertPrefix = $assertPrefix;
-        $this->namespace = $namespace;
-        $this->xsdLocation = $xsdLocation;
+    public function __construct(
+        private readonly string $assertPrefix,
+        private readonly string $namespace,
+        private readonly string $xsdLocation,
+    ) {
     }
 
     public function getAssertName(string $suffix): string
@@ -106,11 +100,7 @@ abstract class BaseDocumentFollowSchemas implements
         return $locationMatches;
     }
 
-    /**
-     * @param SchemaValidator $schemaValidator
-     * @param Schemas $schemas
-     * @return string[] XSD detected errors
-     */
+    /** @return string[] XSD detected errors */
     public function validateXsdSchemas(SchemaValidator $schemaValidator, Schemas $schemas): array
     {
         $resolver = $this->xmlResolver;

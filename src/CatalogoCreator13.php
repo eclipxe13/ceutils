@@ -12,12 +12,10 @@ use PhpCfdi\CeUtils\Validate\MultiValidator;
 
 class CatalogoCreator13 extends AbstractCreator
 {
-    private Catalogo $catalogo;
+    private readonly Catalogo $catalogo;
 
-    /**
-     * @param  array<string, string>  $attributes
-     */
-    public function __construct(array $attributes)
+    /** @param array<string, string> $attributes */
+    public function __construct(array $attributes = [])
     {
         parent::__construct();
         $this->catalogo = new Catalogo($attributes);

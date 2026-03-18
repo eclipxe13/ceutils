@@ -12,12 +12,10 @@ use PhpCfdi\CeUtils\Validate\Polizas13\Polizas13MultiValidator;
 
 class PolizasCreator13 extends AbstractCreator
 {
-    private Polizas $polizas;
+    private readonly Polizas $polizas;
 
-    /**
-     * @param  array<string, string>  $attributes
-     */
-    public function __construct(array $attributes)
+    /** @param array<string, string> $attributes */
+    public function __construct(array $attributes = [])
     {
         parent::__construct();
         $this->polizas = new Polizas($attributes);

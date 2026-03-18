@@ -21,7 +21,7 @@ abstract class BaseExchangeRate implements ValidatorInterface
     public function __construct(string $assertPrefix, string ...$path)
     {
         $this->assertPrefix = $assertPrefix;
-        $this->path = $path;
+        $this->path = array_values($path);
     }
 
     public function validate(NodeInterface $root, Asserts $asserts): void

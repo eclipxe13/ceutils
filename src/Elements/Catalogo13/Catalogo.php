@@ -14,6 +14,7 @@ class Catalogo extends AbstractElement
         return Catalogo13Definition::ELEMENT_NAME;
     }
 
+    /** @noinspection PhpMissingParentCallCommonInspection */
     public function getFixedAttributes(): array
     {
         return [

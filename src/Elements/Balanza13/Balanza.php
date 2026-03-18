@@ -14,6 +14,7 @@ class Balanza extends AbstractElement
         return Balanza13Definition::ELEMENT_NAME;
     }
 
+    /** @noinspection PhpMissingParentCallCommonInspection */
     public function getFixedAttributes(): array
     {
         return [

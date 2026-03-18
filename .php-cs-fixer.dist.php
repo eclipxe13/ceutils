@@ -15,15 +15,15 @@ return (new PhpCsFixer\Config())
     ->setRules([
         '@PSR12' => true,
         '@PSR12:risky' => true,
-        '@PHP74Migration' => true,
-        '@PHP74Migration:risky' => true,
+        '@PHP8x1Migration' => true,
+        '@PHP8x1Migration:risky' => true,
         // symfony
         'class_attributes_separation' => true,
         'whitespace_after_comma_in_array' => true,
         'no_empty_statement' => true,
         'no_extra_blank_lines' => true,
         'type_declaration_spaces' => true,
-        'trailing_comma_in_multiline' => ['after_heredoc' => true, 'elements' => ['arrays', 'arguments']],
+        'trailing_comma_in_multiline' => ['after_heredoc' => true, 'elements' => ['array_destructuring', 'arrays', 'match', 'arguments', 'parameters']],
         'no_blank_lines_after_phpdoc' => true,
         'object_operator_without_whitespace' => true,
         'binary_operator_spaces' => true,

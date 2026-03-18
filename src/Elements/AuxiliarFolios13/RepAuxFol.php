@@ -14,6 +14,7 @@ class RepAuxFol extends AbstractElement
         return AuxiliarFolios13Definition::ELEMENT_NAME;
     }
 
+    /** @noinspection PhpMissingParentCallCommonInspection */
     public function getFixedAttributes(): array
     {
         return [

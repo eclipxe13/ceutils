@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace PhpCfdi\CeUtils\Internal;
 
+use Stringable;
+
 /**
  * Clase para hacer operaciones con tipos t_Importe
  *
  * @internal
  */
-final class Amount
+final class Amount implements Stringable
 {
     public const MIN_VALUE = '-9999999999999999999999.99';
 
@@ -17,7 +19,7 @@ final class Amount
 
     private const SCALE = 2;
 
-    private string $value;
+    private readonly string $value;
 
     public function __construct(string $value)
     {

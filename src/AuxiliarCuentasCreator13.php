@@ -12,12 +12,10 @@ use PhpCfdi\CeUtils\Validate\MultiValidator;
 
 class AuxiliarCuentasCreator13 extends AbstractCreator
 {
-    private AuxiliarCtas $auxiliarCuentas;
+    private readonly AuxiliarCtas $auxiliarCuentas;
 
-    /**
-     * @param  array<string, string>  $attributes
-     */
-    public function __construct(array $attributes)
+    /** @param array<string, string> $attributes */
+    public function __construct(array $attributes = [])
     {
         parent::__construct();
         $this->auxiliarCuentas = new AuxiliarCtas($attributes);

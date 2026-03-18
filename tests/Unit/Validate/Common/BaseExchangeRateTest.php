@@ -19,7 +19,7 @@ final class BaseExchangeRateTest extends TestCase
         parent::setUp();
 
         $this->validator = new class ('FOO', ...['a:foo', 'a:bar']) extends BaseExchangeRate {
-            public static function create(): void
+            public static function create(): never
             {
                 throw new LogicException('Static method wont be tested');
             }

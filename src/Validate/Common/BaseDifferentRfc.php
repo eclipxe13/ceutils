@@ -21,7 +21,7 @@ abstract class BaseDifferentRfc implements ValidatorInterface
     public function __construct(string $assertPrefix, string ...$path)
     {
         $this->assertPrefix = $assertPrefix;
-        $this->path = $path;
+        $this->path = array_values($path);
     }
 
     public function validate(NodeInterface $root, Asserts $asserts): void
@@ -47,7 +47,7 @@ abstract class BaseDifferentRfc implements ValidatorInterface
         NodeInterface $node,
         Asserts $asserts,
         string $location,
-        int $count
+        int $count,
     ): void {
         $rfc = $node['RFC'];
         $asserts->put(

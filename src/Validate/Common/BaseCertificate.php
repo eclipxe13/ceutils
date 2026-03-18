@@ -29,12 +29,9 @@ abstract class BaseCertificate implements
     use XmlResolverPropertyTrait;
     use XsltBuilderPropertyTrait;
 
-    private string $xsltLocation;
-
-    public function __construct(string $assertPrefix, string $xsltLocation)
+    public function __construct(string $assertPrefix, private readonly string $xsltLocation)
     {
         $this->assertPrefix = $assertPrefix;
-        $this->xsltLocation = $xsltLocation;
     }
 
     public function getXsltLocation(): string

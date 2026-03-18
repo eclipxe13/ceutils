@@ -9,6 +9,36 @@ aunque sí su incorporación en la rama principal de trabajo. Generalmente, se t
 
 ## Listado de cambios
 
+### Versión 0.3.0 2026-03-18
+
+Se actualizaron las dependencias del proyecto:
+
+- `Eclipxe/CfdiUtils` a `^3.0.2`.
+- `Eclipxe/XmlResourceRetriever` a `^2.0.3`.
+- `Eclipxe/XmlSchemaValidator` a `^3.0.5`.
+
+Se validó la compatibilidad con PHP 8.4 y PHP 8.5.
+Se elimina la compatibilidad con PHP 7.4 y PHP 8.0.
+
+Se actualizó el año de licencia.
+
+Se moderniza el código a PHP 8.1 con la ayuda de `rector/rector`.
+Este cambio genera múltiples cambios en la definición de propiedades
+y la definición de propiedades de tipo solo lectura.
+
+Cambios en el entorno de desarrollo:
+
+- Se migra de Scrutinizer-CI a SonarCloud.
+- Se actualizan los archivos de configuración de las herramientas de estándar de código.
+- Se agrega `composer-normalize` a las herramientas de desarrollo.
+- Se actualiza el archivo de integración continua de GitHub:
+    - Se agrega PHP 8.4 y PHP 8.5 a la matriz de pruebas.
+    - Se elimina PHP 7.4 y PHP 8.0 de la matriz de pruebas.
+    - Se actualizan las versiones de las acciones de GitHub.
+    - Se ejecutan los trabajos en PHP 8.5.
+    - Se agrega el trabajo `composer-normalize`.
+- Se actualizan las herramientas de desarrollo.
+
 ### Versión 0.2.3 2023-12-18
 
 Algunas clases de validadores no estaban marcadas como *finales*.
