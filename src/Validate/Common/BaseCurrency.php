@@ -45,7 +45,8 @@ abstract class BaseCurrency implements ValidatorInterface
     {
         $currencyExists = $node->attributes()->exists('Moneda');
         $currency = $node['Moneda'];
-        $currencyExplanation = $currencyExists ? $currency ?: '(vacía)' : '(ninguna)';
+        $currencyExplanation = $currencyExists ? ($currency ?: '(vacía)') : '(ninguna)';
+
         $asserts->put(
             $this->getAssertCode(sprintf('-%03d', $count)),
             'La moneda solo se especifica en caso de que sea diferente a moneda nacional',
