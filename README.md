@@ -1,7 +1,7 @@
 # phpcfdi/ceutils
 
 [![Source Code][badge-source]][source]
-[![Packagist PHP Version Support][badge-php-version]][php-version]
+[![PHP Version][badge-php-version]][php-version]
 [![Discord][badge-discord]][discord]
 [![Latest Version][badge-release]][release]
 [![Software License][badge-license]][license]
