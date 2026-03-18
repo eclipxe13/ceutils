@@ -18,7 +18,7 @@ Se actualizaron las dependencias del proyecto:
 - `Eclipxe/XmlSchemaValidator` a `^3.0.5`.
 
 Se validó la compatibilidad con PHP 8.4 y PHP 8.5.
-Se elimina la compatibilidad con PHP 7.4.
+Se elimina la compatibilidad con PHP 7.4 y PHP 8.0.
 
 Se actualizó el año de licencia.
 
@@ -29,7 +29,7 @@ Cambios en el entorno de desarrollo:
 - Se agrega `composer-normalize` a las herramientas de desarrollo.
 - Se actualiza el archivo de integración continua de GitHub:
     - Se agrega PHP 8.4 y PHP 8.5 a la matriz de pruebas.
-    - Se elimina PHP 7.4 de la matriz de pruebas.
+    - Se elimina PHP 7.4 y PHP 8.0 de la matriz de pruebas.
     - Se actualizan las versiones de las acciones de GitHub.
     - Se ejecutan los trabajos en PHP 8.5.
     - Se agrega el trabajo `composer-normalize`.

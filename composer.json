@@ -21,7 +21,7 @@
     ],
     "homepage": "https://github.com/PhpCfdi/CeUtils",
     "require": {
-        "php": ">=8.0",
+        "php": ">=8.1",
         "ext-bcmath": "*",
         "ext-dom": "*",
         "ext-openssl": "*",
