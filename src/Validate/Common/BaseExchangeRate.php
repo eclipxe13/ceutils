@@ -45,7 +45,7 @@ abstract class BaseExchangeRate implements ValidatorInterface
     {
         $currencyExists = $node->attributes()->exists('Moneda');
         $currency = $node['Moneda'];
-        $currencyExplanation = $currencyExists ? $currency ?: '(vacía)' : '(ninguna)';
+        $currencyExplanation = $currencyExists ? ($currency ?: '(vacía)') : '(ninguna)';
 
         $exchangeRate = $node['TipCamb'];
         $asserts->put(
